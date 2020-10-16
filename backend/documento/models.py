@@ -12,6 +12,7 @@ class Documento(models.Model):
     descricao = models.TextField(max_length=1000)
     observacao = models.TextField(max_length=1000)
     data_cadastro = models.DateField()
+    arquivo = models.FileField(blank=True, null=True)
     tipo_digitalizacao = models.ForeignKey(TipoDigitalizacao, on_delete=models.CASCADE)
     frequencia_Uso = models.ForeignKey(FrequenciaUso, on_delete=models.CASCADE)
     prazos_guarda = models.ForeignKey(PrazosGuarda, on_delete=models.CASCADE)

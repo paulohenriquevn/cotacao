@@ -2,6 +2,8 @@
 from django.conf.urls import include
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls.static import static
+from django.conf import settings
 from rest_framework_swagger.views import get_swagger_view
 from cadastros_classificacao.urls import cadastros_classificacao_urls
 from documento.urls import documento_urls
@@ -13,4 +15,4 @@ urlpatterns = [
     path('classificacao/',include(cadastros_classificacao_urls)),
     path('documento/',include(documento_urls)),
     path('', schema_view)
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
