@@ -5,8 +5,3 @@ class ComumSerializer(serializers.ModelSerializer):
   class Meta:
     model = TipoDigitalizacao
     fields = ('id', 'codigo', 'nome')
-
-class TipoDigitalizacaoSerializer(serializers.ModelSerializer):
-  class Meta:
-    model = TipoDigitalizacao
-    fields = ('id', 'codigo', 'nome')
