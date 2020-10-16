@@ -4,6 +4,7 @@ from django.db import models
 
 # Tipo de digitalização
 class TipoDigitalizacao(models.Model):
+    codigo = models.CharField(max_length=50)
     nome = models.CharField(max_length=500)
 
     def __str__(self):
@@ -11,6 +12,7 @@ class TipoDigitalizacao(models.Model):
 
 # Frequência de uso
 class FrequenciaUso(models.Model):
+    codigo = models.CharField(max_length=50)
     nome = models.CharField(max_length=500)
 
     def __str__(self):
@@ -18,6 +20,7 @@ class FrequenciaUso(models.Model):
 
 # Prazos de guarda
 class PrazosGuarda(models.Model):
+    codigo = models.CharField(max_length=50)
     nome = models.CharField(max_length=500)
 
     def __str__(self):
@@ -25,6 +28,7 @@ class PrazosGuarda(models.Model):
 
 # Fase intermediária
 class FaseIntermediaria(models.Model):
+    codigo = models.CharField(max_length=50)
     nome = models.CharField(max_length=500)
 
     def __str__(self):
@@ -32,6 +36,7 @@ class FaseIntermediaria(models.Model):
 
 # Destinação final
 class DestinacaoFinal(models.Model):
+    codigo = models.CharField(max_length=50)
     nome = models.CharField(max_length=500)
 
     def __str__(self):
@@ -39,6 +44,7 @@ class DestinacaoFinal(models.Model):
 
 # Grau de sigio da documentação
 class GrauSigioDocumentacao(models.Model):
+    codigo = models.CharField(max_length=50)
     nome = models.CharField(max_length=500)
 
     def __str__(self):

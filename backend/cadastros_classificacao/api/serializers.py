@@ -1,7 +1,12 @@
 from rest_framework import serializers
-from .models import TipoDigitalizacao
+from cadastros_classificacao.models import TipoDigitalizacao
+
+class ComumSerializer(serializers.ModelSerializer):
+  class Meta:
+    model = TipoDigitalizacao
+    fields = ('id', 'codigo', 'nome')
 
 class TipoDigitalizacaoSerializer(serializers.ModelSerializer):
   class Meta:
     model = TipoDigitalizacao
-    fields = ('id', 'nome')
+    fields = ('id', 'codigo', 'nome')
