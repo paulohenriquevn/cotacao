@@ -141,7 +141,7 @@ MEDIA_URL = '/arquivos/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "arquivos")
 
 CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000'
+    'http://localhost:8080'
 ]
 
 REST_FRAMEWORK = {

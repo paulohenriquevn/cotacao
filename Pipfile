@@ -10,6 +10,7 @@ django = "*"
 psycopg2-binary = "*"
 djangorestframework = "*"
 django-cors-headers = "*"
+django-rest-swagger = "*"
 
 [requires]
 python_version = "3.6"
