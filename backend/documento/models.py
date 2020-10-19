@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 from cadastros_classificacao.models import TipoDigitalizacao
 from cadastros_classificacao.models import FrequenciaUso
 from cadastros_classificacao.models import PrazosGuarda
@@ -19,3 +20,4 @@ class Documento(models.Model):
     fase_intermediaria = models.ForeignKey(FaseIntermediaria, on_delete=models.CASCADE)
     destinacao_final = models.ForeignKey(DestinacaoFinal, on_delete=models.CASCADE)
     grau_sigio_documentacao = models.ForeignKey(GrauSigioDocumentacao, on_delete=models.CASCADE)
+    assinantes = models.ManyToManyField(User)
