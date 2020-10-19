@@ -6,6 +6,7 @@ from cadastros_classificacao.models import PrazosGuarda
 from cadastros_classificacao.models import FaseIntermediaria
 from cadastros_classificacao.models import DestinacaoFinal
 from cadastros_classificacao.models import GrauSigioDocumentacao
+from core.models import Usuario
 
 class Documento(models.Model):
     numero = models.CharField(max_length=100)
@@ -20,4 +21,4 @@ class Documento(models.Model):
     fase_intermediaria = models.ForeignKey(FaseIntermediaria, on_delete=models.CASCADE)
     destinacao_final = models.ForeignKey(DestinacaoFinal, on_delete=models.CASCADE)
     grau_sigio_documentacao = models.ForeignKey(GrauSigioDocumentacao, on_delete=models.CASCADE)
-    assinantes = models.ManyToManyField(User)
+    assinantes = models.ManyToManyField(Usuario)
